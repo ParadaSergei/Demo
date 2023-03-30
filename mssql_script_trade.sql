@@ -1,0 +1,95 @@
+--create table [Role]
+--(
+--	RoleID int primary key identity,
+--	RoleName nvarchar(100) not null
+--)
+--go
+--create table [UserData]
+--(
+--	[ID] int primary key identity,
+--	[Surname] nvarchar(100) not null,
+--	[Name] nvarchar(100) not null,
+--	[Patronymic] nvarchar(100) null,
+--)
+--go
+--create table [User]
+--(
+--	[ID] int primary key identity,
+--	[Login] nvarchar(100) not null,
+--	[Password] nvarchar(50) not null,
+--	[RoleID] int foreign key references [Role](RoleID) not null,
+--	[UserDataID] int foreign key references [UserData](ID) not null
+--)
+--go
+--create table [StatusOrder]
+--(
+--	[ID] int primary key identity,
+--	[Code] int not null,
+--	[Status] nvarchar(50) not null,
+--)
+--go
+--create table [OrderPoint]
+--(
+--	[ID] int primary key identity,
+--	[Index] int,
+--	[City]  nvarchar(50) not null,
+--	[Street]  nvarchar(50) not null,
+--	[NumberHouse] int null,
+--)
+--go
+
+--create table [Order]
+--(
+--	[ID] int primary key identity,
+--	[Compound]  nvarchar(100) not null,
+--	[DeliveryOrder] datetime not null,
+--	[DeliveryDate] datetime not null,
+--	[PickupPoint] int foreign key references [OrderPoint](ID) not null,
+--	[UserDataForOrderID] int foreign key references [UserData](ID) not null,
+--	[StatusID] int foreign key references [StatusOrder]([ID]) not null
+--)
+--go
+--create table Product
+--(
+--	[ArticulProduct] int primary key identity,
+--	[Name] nvarchar(50) not null,
+--	[Description] nvarchar(100) not null,
+--	[Category] nvarchar(30) not null,
+--	[Manufacturer] nvarchar(50) not null,
+--	[Cost] nvarchar(100) not null,
+--	[DiscountAmount] tinyint null,
+--	[QuantityInStock] int not null,
+--)
+--create table [StatusProduct]
+--(
+--	[ID] int primary key identity,
+--	[Status] nvarchar(50) not null,
+--)
+--go
+--create table OrderProduct
+--(
+--	[OrderID] int foreign key references [Order]([ID]) not null,
+--	[ProductID] int foreign key references Product([ArticulProduct]) not null,
+--	Primary key (OrderID,ProductID)
+--)
+
+
+--INSERT INTO Role(	 RoleName		)Values('Admin')
+--INSERT INTO Role(	 RoleName		)Values('Manager)
+--INSERT INTO Role(	RoleName		)Values('Klient')
+--INSERT INTO Product(	[Name],[Description],[Category],[Manufacturer],[Cost],[DiscountAmount],[QuantityInStock])VALUES(	'Цемент'	,	'Цемент Евроцемент М500 Д0 ЦЕМ I 42,5 50 кг'	,	'бщестроительные материалы'	,	'М500'	,440	,	8	,	34	)
+--INSERT INTO Product(	[Name],[Description],[Category],[Manufacturer],[Cost],[DiscountAmount],[QuantityInStock])VALUES(	'Пленка техническая	',	'Пленка техническая полиэтиленовая Изостронг 60 мк 3 м рукав 1,5 м, пог.м'	,	'Общестроительные материалы'	,	'Изостронг'	,	8	,	8	,	2	)
+
+--INSERT INTO UserData( Surname,Name,Patronymic  	)VALUES('	Басова	','Амина','	Кирилловна	')
+--INSERT INTO UserData( Surname,Name,Patronymic  	)VALUES('Михайлов','	Андрей','	Денисович')
+--INSERT INTO UserData( Surname,Name,Patronymic  	)VALUES('	Сидоров','	Егор','	Александрович')
+--INSERT INTO UserData( Surname,Name,Patronymic  	)VALUES('	Аксенова','	Ульяна','	Ивановна')
+--INSERT INTO UserData( Surname,Name,Patronymic  	)VALUES('	Васильева','	Камила','	Ивановна')
+--INSERT INTO UserData( Surname,Name,Patronymic  	)VALUES('	Ильин','	Артём	','Родионович'	)
+--INSERT INTO  [User]( Login,Password,RoleID,UserDataID	)VALUES('	klh7pi4rcbtz@gmail.com	','2L6KZG',	1,	1	)
+--INSERT INTO  [User]( Login,Password,RoleID,UserDataID	)VALUES('	gn0354mbiork@outlook.com','	uzWC67',	2	,2	)
+--INSERT INTO [User]( Login,Password,RoleID,UserDataID	)VALUES('	1o4l05k8dwpv@yahoo.com','	8ntwUp',	3,	3	)
+
+
+
+

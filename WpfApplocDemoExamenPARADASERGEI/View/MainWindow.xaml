@@ -1,0 +1,69 @@
+﻿<Window x:Class="WpfApplocDemoExamenPARADASERGEI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplocDemoExamenPARADASERGEI"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="ООО «Стройматериалы»" Height="450" Width="370">
+    <Border BorderBrush="Black" BorderThickness="2" CornerRadius="30">
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+            <Border  CornerRadius="30" Background="#76e383"  BorderThickness="3">
+                <Label
+            Content="Авторизация"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="40"
+            FontStyle="Normal"
+            />
+            </Border>
+            <StackPanel  Grid.Row="1" Width="300">
+            <Label
+                Content="Логин"
+                FontSize="20"     
+                />
+            <TextBox
+                Background="#498c51"
+                Text="{Binding Login}"/>
+        </StackPanel>
+        <StackPanel  Grid.Row="2"  Width="300">
+            <Label
+                Content="Пароль"
+                FontSize="20"     
+                />
+            <PasswordBox
+                Name="pswBox"
+                Background="#498c51"/>
+        </StackPanel>
+        <Button
+            Click="OpenAutoriz_Click"
+            Grid.Row="3"
+            Height="30"
+            Width="100"
+            Content="Войти"
+            FontSize="20"
+            HorizontalAlignment="Right"
+            Margin="10"
+            />
+            <Button
+            Click="GoustAutoriz_Click"
+            Grid.Row="3"
+            Height="30"
+            Width="100"
+            Content="Гость"
+            FontSize="20"
+            HorizontalAlignment="Left"
+            Margin="10"
+            />
+
+        </Grid>
+    </Border>
+</Window>

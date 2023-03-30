@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="04f30db49c0f4185b7c5376405b8eb0c" Name="Diagram1">
+        <EntityTypeShape EntityType="BuildMaterialDbModel.Order" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BuildMaterialDbModel.OrderPoint" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BuildMaterialDbModel.Product" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BuildMaterialDbModel.Role" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BuildMaterialDbModel.StatusOrder" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BuildMaterialDbModel.StatusProduct" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="BuildMaterialDbModel.User" Width="1.5" PointX="6" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BuildMaterialDbModel.UserData" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="BuildMaterialDbModel.FK__Order__PickupPoi__7B5B524B" ManuallyRouted="false" />
+        <AssociationConnector Association="BuildMaterialDbModel.FK__Order__StatusID__7D439ABD" ManuallyRouted="false" />
+        <AssociationConnector Association="BuildMaterialDbModel.FK__Order__UserDataF__7C4F7684" ManuallyRouted="false" />
+        <AssociationConnector Association="BuildMaterialDbModel.FK__User__RoleID__73BA3083" ManuallyRouted="false" />
+        <AssociationConnector Association="BuildMaterialDbModel.FK__User__UserDataID__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="BuildMaterialDbModel.OrderProduct" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
